@@ -1,0 +1,50 @@
+.container {
+    display: flex; /* 容器使用flex布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    z-index: 1; /* 设置层级 */
+}
+.parallax-container {
+    background-image: url('../img/1920-2400.jpg'); /* 背景图片 */
+    background-size: cover; /* 背景图片自适应 */
+    background-attachment: fixed; /* 背景图片固定 */
+    background-position: center center; /* 背景图片位置 */
+    animation: scroll 30s linear infinite; /* 背景图片滚动动画 */
+}
+.card-panel.white {
+    border-radius: 10px; /* 圆角 */
+    padding:20px; /* 内边距 */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* 阴影 */
+    transition: 0.3s; /* 过渡效果 */
+    background-color: white; /* 背景颜色 */
+    display: inline-block; /* 行内块元素 */
+    overflow-y: scroll; /* 纵向滚动条 */
+    width: 80%; /* 宽度 */
+    margin: 100px auto 0 auto; /* 外边距 */
+}
+ul {
+    list-style: none;
+}
+
+@media screen and (max-width: 800px) {
+    .card-panel.white {
+        margin: 100px 20px; /* 外边距 */
+        width: 60%; /* 宽度 */
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .card-panel.white {
+        margin: 100px 40px; /* 外边距 */
+        width: 90%; /* 宽度 */
+    }
+}
+
+@keyframes scroll {
+    0% {
+        background-position: 0 0; /* 背景图片位置 */
+    }
+    100% {
+        background-position: 0 -2000px; /* 背景图片位置 */
+    }
+}

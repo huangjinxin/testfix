@@ -1,0 +1,121 @@
+/* 全局样式 */
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* 页面标题样式 */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* 服务承诺样式 */
+.services {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.service {
+    text-align: center;
+    width: calc(100% / 3 - 20px);
+    background-color: #eee;
+    padding: 20px;
+}
+
+.service h3 {
+    margin-top: 0;
+}
+
+.service p {
+    margin-bottom: 0;
+}
+
+/* 公司历史样式 */
+.company-history {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.company-history img {
+    max-width: 100%;
+}
+
+/* 维修流程样式 */
+.repair-process {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.process-step {
+    text-align: center;
+    width: calc(100% / 4 - 20px);
+    background-color: #eee;
+    padding: 20px;
+}
+
+.process-step h3 {
+    margin-top: 0;
+}
+
+.process-step p {
+    margin-bottom: 0;
+}
+
+/* 维修故事记录样式 */
+.repair-stories {
+    margin-bottom: 40px;
+}
+
+.story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.story-image {
+    flex-basis: 40%;
+    max-width: 100%;
+    margin-right: 20px;
+}
+
+.story-image img {
+    max-width: 100%;
+}
+
+.story-text {
+    flex-basis: 60%;
+}
+
+.story-title {
+    margin-top: 0;
+}
+
+.story-content {
+    margin-bottom: 0;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

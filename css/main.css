@@ -1,0 +1,95 @@
+/* 定义根元素 */
+:root {
+    --device-width: 770px; /* 定义设备宽度 */
+    --device-height: 1336px; /* 定义设备高度 */
+    --ui-width: 640px; /* 定义UI宽度 */
+    font-size: 15px; /* 设置字体大小 */
+    --progress: 0.5; /* 定义自定义属性--progress并设置初始值为0.5 */
+}
+
+/* 设置body样式 */
+body {
+    background-color: #000; /* 设置背景颜色 */
+    margin: 0; /* 设置外边距 */
+    min-height: 100vh; /* 设置最小高度为100vh */
+    font-family:"Apple Symbols", serif; /* 设置字体 */
+    padding: 4rem 0; /* 设置内边距 */
+    overflow-x: hidden; /* 处理左右溢出问题 */
+}
+
+.body {
+    display: flex; /* 设置弹性布局 */
+    flex-direction: column; /* 设置主轴方向为垂直方向 */
+    justify-content: center; /* 设置主轴对齐方式为居中对齐 */
+    align-items: center; /* 设置交叉轴对齐方
+    式为居中对齐 */
+    min-height: 100vh; /* 设置最小高度为100vh */
+    font-family:"Apple Symbols", serif; /* 设置字体 */
+    padding: 4rem 0; /* 设置内边距 */
+    overflow-x: hidden; /* 处理左右溢出问题 */
+}
+
+/* 设置h2样式 */
+h2 {
+    color: #6e6e73; /* 设置字体颜色 */
+    text-align: center; /* 设置文本对齐方式为居中对齐 */
+    font-size: 5.5rem; /* 设置字体大小 */
+    font-weight: 600; /* 设置字体粗细 */
+    margin: 6rem 0; /* 设置外边距 */
+}
+h2 a {
+    font-size: 38px;
+}
+
+/* 设置h2下的p样式 */
+h2 p {
+    margin: 0; /* 设置外边距 */
+    color: #fff; /* 设置字体颜色 */
+}
+
+/* 设置iphone样式 */
+#iphone {
+    position: relative; /* 设置定位方式为相对定位 */
+    width: var(--device-width); /* 设置宽度为设备宽度 */
+    height: var(--device-height); /* 设置高度为设备高度 */
+}
+
+/* 设置硬件样式 */
+#hardware {
+    width: 100%; /* 设置宽度为100% */
+    height: 100%; /* 设置高度为100% */
+    background-image: url(../img/phone.jpg); /* 设置背景图片 */
+    background-size: var(--device-width) var(--device-height); /* 设置背景图片大小 */
+}
+
+/* 设置UI样式 */
+#ui {
+    position: absolute; /* 设置定位方式为绝对定位 */
+    top: 0; /* 设置上边距为0 */
+    left: 50%; /* 设置左边距为50% */
+    transform: translateX(-50%); /* 设置水平方向上的偏移量为-50% */
+}
+
+/* 设置UI下的.top-ui样式 */
+#ui .top-ui {
+    display: block; /* 设置为块级元素 */
+    width: var(--ui-width); /* 设置宽度为UI宽度 */
+    height: auto; /* 设置高度为自适应 */
+    margin: 70px auto 0; /* 设置外边距 */
+}
+
+/* 设置UI下的ul样式 */
+#ui ul {
+    list-style: none; /* 去除列表样式 */
+    margin: 0; /* 设置外边距为0 */
+    padding: 0; /* 设置内边距为0 */
+}
+
+/* 设置UI下的ul下的li下的img样式 */
+#ui ul li img {
+    display: block; /* 设置为块级元素 */
+    width: var(--ui-width); /* 设置宽度为UI宽度 */
+    margin: 10px auto; /* 设置外边距 */
+    transform: scale(calc(1.8 - (0.8 * var(--progress)))) translateY(calc(-60px * (1 - var(--progress)))); /* 设置缩放和垂直方向上的偏移量 */
+    opacity: var(--progress); /* 设置透明度 */
+}

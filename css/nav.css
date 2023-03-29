@@ -1,0 +1,80 @@
+/* 全局样式 */
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+}
+.new-nav::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 20px;
+    background-color: #333;
+    position: absolute;
+    left: -20px;
+}
+.new-nav {
+    display: flex; /* 设置为弹性布局 */
+    justify-content: center; /* 设置主轴对齐方式 */
+    align-items: center; /* 设置交叉轴对齐方式 */
+    padding: 20px; /* 设置内边距 */
+    background-color: #333; /* 设置背景颜色 */
+    color: #fff; /* 设置字体颜色 */
+    position: fixed; /* 设置为固定定位 */
+    top: 0; /* 设置顶部距离 */
+    width: 100%; /* 设置宽度 */
+    z-index: 9999; /* 设置层级 */
+}
+
+.new-nav ul {
+    display: flex; /* 设置为弹性布局 */
+    list-style: none; /* 去除列表样式 */
+    margin: 0; /* 设置外边距 */
+    padding: 0; /* 设置内边距 */
+}
+
+.new-nav li {
+    margin: 0 30px; /* 设置外边距 */
+}
+.new-nav a {
+    color: #fff; /* 设置字体颜色 */
+    text-decoration: none; /* 去除下划线 */
+}
+
+.new-nav ul li ul.new-nav-sub-menu {
+    display: flex; /* 设置为弹性布局 */
+    flex-wrap: wrap; /* 设置换行 */
+    justify-content: space-between; /* 设置主轴对齐方式 */
+    align-items: center; /* 设置交叉轴对齐方式 */
+    background-color: #000000; /* 设置背景颜色 */
+    padding: 0 20px; /* 设置内边距 */
+    width: 100%; /* 设置宽度 */
+}
+.new-nav ul li ul.new-nav-sub-menu li {
+    width: 20%; /* 设置宽度 */
+    margin-bottom: 20px; /* 设置下边距 */
+}
+.new-nav ul li > a {
+    color: #ffffff; /* 设置字体颜色 */
+    font-size: 18px; /* 设置字体大小 */
+    font-weight: bold; /* 设置字体加粗 */
+    background-color: transparent; /* 设置背景颜色 */
+    font-weight: normal; /* 设置字体正常 */
+}
+.new-nav ul li ul.new-nav-sub-menu {
+    position: absolute; /* 设置为绝对定位 */
+    top: 60px; /* 设置顶部距离 */
+    left: 0; /* 设置左侧距离 */
+    background-color: #000000; /* 设置背景颜色 */
+    padding: 20px; /* 设置内边距 */
+    opacity: 0; /* 设置透明度 */
+    visibility: hidden; /* 设置可见性 */
+    transition: all 0.5s ease-in-out; /* 设置过渡效果 */
+}
+.new-nav ul li:hover > ul.new-nav-sub-menu {
+    opacity: 1; /* 设置透明度 */
+    visibility: visible; /* 设置可见性 */
+}
+.new-nav ul li ul.new-nav-sub-menu li a {
+    color: white; /* 设置字体颜色 */
+    font-size: 18px; /* 设置字体大小 */
+    font-weight: bold; /* 设置字体加粗 */
+}
